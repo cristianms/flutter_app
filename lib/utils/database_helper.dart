@@ -16,7 +16,7 @@ class DatabaseHelper {
   // Isso é um named constructor irá chamar o construtor da classe
   DatabaseHelper.getInstance();
 
-  // Contrutor que será acessado quando for solicitada uma instancia do db
+  // Construtor que será acessado quando for solicitada uma instancia do db
   // sempre será retornada a instância que já está aberta (singleton)
   factory DatabaseHelper() => _instance;
 
@@ -38,7 +38,7 @@ class DatabaseHelper {
     return _db;
   }
 
-  // Função responsável por retorna uma instância do banco de dados
+  // Função responsável por retornar uma instância do banco de dados
   Future _initDb() async {
     // Caminho do diretório do arquivo de banco de dados
     String databasesPath = await getDatabasesPath();

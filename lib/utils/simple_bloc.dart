@@ -1,5 +1,6 @@
 import 'dart:async';
 
+/// Classe responsável por centralizar o métodos de controle do stream controller
 class SimpleBloc<T> {
 
   final _controller = StreamController<T>();

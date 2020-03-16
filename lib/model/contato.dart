@@ -1,7 +1,9 @@
 import 'package:flutterapp/utils/entity.dart';
 import 'dart:convert' as convert;
 
+// Classe base da entidade
 class Contato extends Entity {
+
   // Propriedades
   int id_contato;
   String nome;

@@ -25,10 +25,10 @@ dependencies:
   cupertino_icons: ^0.1.2
 
   # Minhas dependências
-  shared_preferences: ^0.5.6+2
-  sqflite: ^1.2.1
-  package_info: ^0.4.0+14
-  shake: ^0.1.0
+  shared_preferences: ^0.5.6+2  # Shared preferences, não utilizado nesse projeto
+  sqflite: ^1.2.1               # SQLite
+  package_info: ^0.4.0+14       # Utilizado para buscar o nome do projeto
+  shake: ^0.1.0                 # Evento de shake
 
 dev_dependencies:
   flutter_test:

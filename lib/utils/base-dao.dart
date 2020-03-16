@@ -8,10 +8,11 @@ abstract class BaseDAO<T extends Entity> {
   /// Captura a instância do banco
   Future<Database> get db => DatabaseHelper.getInstance().db;
 
-  /// Propriedade que precisará ser setada ao utilizar o BaseDAO
-  /// representa a entidade
+  /// Propriedade que precisará ser setada ao utilizar o BaseDAO representa a
+  /// entidade
   String get tableName;
 
+  /// Método responsável por receber um Map e retornar o objeto
   T fromMap(Map<String, dynamic> map);
 
   /// Método responsável por salvar o registro passado
@@ -80,7 +81,9 @@ abstract class BaseDAO<T extends Entity> {
   /// Método responsável por executar uma query
   Future<List<T>> query(String sql, [List<dynamic> arguments]) async {
     final dbClient = await db;
+    // Retorna um List da consulta
     final list = await dbClient.rawQuery(sql, arguments);
+    // Percorre o List
     return list.map<T>((json) => fromMap(json)).toList();
   }
 }

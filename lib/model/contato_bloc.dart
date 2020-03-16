@@ -12,19 +12,18 @@ class ContatoBloc extends SimpleBloc<List<Contato>> {
       // Realiza a consulta através da classe DAO
       List<Contato> arrContatos = await ContatoDAO().findAll();
 
-      if(arrContatos.length < 20000) {
-          Contato entity = Contato();
-          var objDao = ContatoDAO();
-          for (int i = 0; i < 20000; i++) {
-            entity.nome = "Teste $i";
-            entity.email = "teste_$i@teste.com.br";
-            entity.idade = i;
-            entity.sexo = 'm';
-            objDao.save(entity);
-          }
-          print('um milhão inserido...');
-      }
-
+//      if(arrContatos.length < 100) {
+//          Contato entity = Contato();
+//          var objDao = ContatoDAO();
+//          for (int i = 0; i < 100; i++) {
+//            entity.nome = "Teste $i";
+//            entity.email = "teste_$i@teste.com.br";
+//            entity.idade = i;
+//            entity.sexo = 'm';
+//            objDao.save(entity);
+//          }
+//          print('um milhão inseridos...');
+//      }
 
       // Adiciona dados para o stream
       add(arrContatos);

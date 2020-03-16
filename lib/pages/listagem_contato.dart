@@ -19,7 +19,6 @@ class _ListagemContatoState extends State<ListagemContato> {
     _bloc.fetch();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
@@ -53,6 +52,7 @@ class _ListagemContatoState extends State<ListagemContato> {
           itemCount: arrContatos != null ? arrContatos.length : 0,
           itemBuilder: (context, index) {
             Contato c = arrContatos[index];
+            // O Card representada cada item da lista
             return Card(
               child: Container(
                 padding: EdgeInsets.all(10),
